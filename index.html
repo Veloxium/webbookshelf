@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          fill="currentColor"
+          class="bi bi-journal-bookmark-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z"
+          />
+          <path
+            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"
+          />
+          <path
+            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"
+          />
+        </svg>
+        <h2>Bookshelf Apps</h2>
+      </div>
+    </header>
+    <section>
+      <div class="container-text">
+        <h1>
+          Selamat Datang <br />
+          di Bookshelf!
+        </h1>
+        <p>
+          Kelola dan pantau kemajuan bacaan Anda dengan mudah. Tambahkan buku
+          baru ke rak yang sesuai dan nikmati pengalaman membaca yang
+          terorganisir.
+        </p>
+        <div class="container-search">
+          <button class="btn-add">Tambah Buku</button>
+          <div class="search">
+            <input type="text" placeholder="Cari Buku" class="search-input" />
+            <button class="btn-search" onclick="search()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+            </button>
+            <button class="btn-refresh" onclick="refresh()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-clockwise"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+                />
+                <path
+                  d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container-table">
+        <div class="table">
+          <p class="title">Belum Selesei dibaca</p>
+          <div class="container-books-belum"></div>
+        </div>
+      </div>
+      <div class="container-table">
+        <div class="table">
+          <p class="title">Selesei dibaca</p>
+          <div class="container-books-selesei"></div>
+        </div>
+      </div>
+      <div class="add-book">
+        <div class="table-add">
+          <h3>Masukan Data Buku</h3>
+          <form action="submit" id="form-book">
+            <div class="input">
+              <label for="title">Judul</label>
+              <input type="text" name="title" class="title-input" />
+            </div>
+            <div class="input">
+              <label for="author">Penulis</label>
+              <input type="text" name="author" class="author-input" />
+            </div>
+            <div class="input">
+              <label for="year">Tahun</label>
+              <input type="number" name="year" class="year-input" />
+            </div>
+            <div class="check">
+              <label for="check">Sudah dibaca</label>
+              <input type="checkbox" name="check" class="check-input" />
+            </div>
+            <button class="tambah">Tambah</button>
+            <button class="batal">Batal</button>
+          </form>
+        </div>
+      </div>
+      <div class="custom-dialog">
+        <p class="text-dialog">Buku Berhasil Ditambahkan</p>
+      </div>
+    </section>
+    <footer>
+      <p>© 2023 Bookshelf Apps Dicoding Veloxium</p>
+    </footer>
+  </body>
+  <script src="main.js"></script>
+</html>
